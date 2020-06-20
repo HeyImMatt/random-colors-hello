@@ -6,8 +6,10 @@ function randomRGB() {
 }
 
 function changeColor() {
-  const h1 = document.querySelector('h1');
-  h1.style.color = randomRGB();
+  const letters = document.querySelectorAll('.letter');
+  for (let letter of letters) {
+    letter.style.color = randomRGB();
+  }
 }
 
 setInterval(changeColor, 500)
